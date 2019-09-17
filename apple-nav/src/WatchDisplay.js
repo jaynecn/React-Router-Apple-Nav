@@ -1,11 +1,11 @@
 import React from 'react';
-import {ipadList} from '../src/data';
+import {watchList} from '../src/data';
 
-function ipadDisplay(props) {
+function WatchDisplay(props) {
   return (
     <div className="characters-list-wrapper">
     {
-      ipadList.map((info)  => (
+      watchList.map((info)  => (
         <div className="character-card" key={info.id}>
         <p>{info.name}</p>
         </div>
@@ -16,4 +16,4 @@ function ipadDisplay(props) {
 
 }
 
-export default ipadDisplay;
+export default WatchDisplay;

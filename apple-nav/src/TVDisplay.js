@@ -1,11 +1,11 @@
 import React from 'react';
-import {ipadList} from '../src/data';
+import {tvList} from '../src/data';
 
-function ipadDisplay(props) {
+function TVDisplay(props) {
   return (
     <div className="characters-list-wrapper">
     {
-      ipadList.map((info)  => (
+      tvList.map((info)  => (
         <div className="character-card" key={info.id}>
         <p>{info.name}</p>
         </div>
@@ -16,4 +16,4 @@ function ipadDisplay(props) {
 
 }
 
-export default ipadDisplay;
+export default TVDisplay;
