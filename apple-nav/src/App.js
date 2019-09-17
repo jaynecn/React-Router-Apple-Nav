@@ -2,8 +2,9 @@ import React from 'react';
 import {Route, Link, NavLink} from 'react-router-dom';
 import './App.css';
 import MacList from './MacList';
-import MacDisplay from './MacDisplay';
-import { macs } from './data';
+import IpadDisplay from './IpadDisplay';
+import IphoneDisplay from './IphoneDisplay';
+import { macs, ipadList, iphoneList } from './data';
 
 function App() {
   return (
@@ -29,12 +30,11 @@ function App() {
         </li>
         <li>
           <NavLink to="/support" activeClassName="activeNavButton">Support</NavLink>
-        </li>
-        
-        <Route exact path="/" render={props => <MacList {...props} macs={macs}/> } />
-        <Route exact path="/ipad"/>
-      
+        </li>      
       </ul>
+      <Route exact path="/" render={props => <MacList {...props} macs={macs}/> } />
+      <Route exact path="/ipad" render={props => <IpadDisplay {...props} ipadlist={ipadList}/> } />
+      <Route exact path="/iphone" render={props => <IphoneDisplay {...props} iphonelist={iphoneList}/> } />
     </div>
   );
 }

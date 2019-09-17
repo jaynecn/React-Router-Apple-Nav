@@ -1,23 +1,20 @@
 import React from 'react';
-import { macs } from './data';
-import MacDisplay from './IpadDisplay';
+import { iphoneList } from './data';
 
-function MacList (props) {
-  // debugger// props.macs.name
-  // console.log(props);
+function IphoneDisplay (props) {
   return (
     <div className="characters-list-wrapper">
     {
-      macs.map((info)  => (
+      iphoneList.map((info)  => (
         <div className="character-card" key={info.id}>
         <p>{info.name}</p>
         </div>
       ))
     }
     </div>
+    
   )
 }
 
 
-
-export default MacList;
+export default IphoneDisplay;
